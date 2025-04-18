@@ -1,0 +1,13 @@
+.custom_for_before{
+    position: absolute;
+    left: -250%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(0deg, #151517, #484c69);
+    border-radius: 30px;
+    z-index: 20;
+    transition: all ease-in-out 800ms;
+}
+.change_style{
+    left: 50%;
+}
