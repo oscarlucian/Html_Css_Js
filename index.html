@@ -3,289 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reflection</title>
+    <title>Auth</title>
     <link rel="stylesheet" href="src/output.css">
     <link rel="icon" type="image/ico" href="img/Logo/icon.ico">
-    <link rel="stylesheet" href="src/custom.css">
+    <link rel="stylesheet" href="Auth/css/index.css">
 </head>
 <body>
-    <div class="hidden md:block">
-        <!-- Header and nav -->
-        <header class="z-50 sticky top-0 flex justify-between items-center bg-[#bdadad] p-1">
-            <div class="w-[45px] h-[45px]">
-                <img src="img/Logo/logo.png" alt="Logo" class="w-full h-full rounded-sm">
-            </div>
-            <nav class="flex">
-                <ul class="relative flex bg-[#d5c9c9] mx-2 rounded-xl py-1 px-2">
-                    <div id="hover_box" class="absolute h-full w-23 bg-[#292d38] rounded-xl z-0 -translate-x-2 -translate-y-1"></div>
-                    <li class="mr-2 z-1">
-                        <a href=""
-                        class=" text-[#ccc] px-3 py-1 rounded-xl transition-all duration-300">
-                            <i class="fa-regular fa-comments"></i> Sms
-                        </a>
-                    </li>
-                    <li class="mx-1">
-                        <a href=""
-                        class="hover:bg-[#292d38] hover:text-[#ccc] text-[#555]
-                         px-3 py-1 rounded-xl transition-all duration-300"
-                        >
-                            Home
-                        </a>
-                    </li>
-                    <li class="mx-1">
-                        <a href=""
-                        class="hover:bg-[#292d38] hover:text-[#ccc] text-[#555]
-                         px-3 py-1 rounded-xl transition-all duration-300"
-                        >
-                            Servicces
-                        </a>
-                    </li>
-                    <li class="mx-1">
-                        <a href=""
-                        class="hover:bg-[#292d38] hover:text-[#ccc] text-[#555]
-                         px-3 py-1 rounded-xl transition-all duration-300"
-                        >
-                            About
-                        </a>
-                    </li>
-                    <li  class="ml-2">
-                        <a href=""
-                        class="hover:bg-[#292d38] hover:text-[#ccc] text-[#555]
-                         px-3 py-1 rounded-xl transition-all duration-300"
-                        >
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-                <div>
-                    <a href=""
-                    class="hover:bg-[#292d38] hover:text-[#ccc] text-[#555]
-                     bg-[#d5c9c9] mx-1 rounded-xl px-3 py-1 transition-all duration-300"
-                    >
-                        Settings
-                    </a>
-                </div>
-
-                <div>
-                    <a href="Auth/index.html"
-                    class="hover:bg-[#292d38] hover:text-[#ccc] text-[#555]
-                     bg-[#d5c9c9] mx-1 rounded-xl px-3 py-1 transition-all duration-300"
-                    >
-                    <i class="fa-regular fa-circle-user"></i>
-                    </a>
-                </div>
-            </nav>
-        </header>
-        <!-- side bar -->
-        <aside class=" z-49 fixed left-0 top-0 h-full w-[50px] bg-[#151517] p-1 pt-15" >
-            <div class="h-full flex flex-col justify-between items-center text-[#ccc]">
-                <ul class="flex flex-col justify-center items-center gap-7
-                border-b pb-2">
-                    <li class="relative">
-                        <small class="absolute -right-1 -top-1 px-1 rounded-xl bg-red-400 text-white text-[8px]">
-                            90+
-                        </small>
-                        <a href="#" class="bg-[#444] px-3 py-0.5 rounded-lg transition-all duration-300">
-                            <i class="fa-regular fa-message"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:bg-[#444] px-3 py-0.5 rounded-lg transition-all duration-300">
-                            <i class="fa-solid fa-phone-slash"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:bg-[#444] px-3 py-0.5 rounded-lg transition-all duration-300">
-                            <i class="fa-regular fa-comment-dots"></i>
-                        </a>
-                    </li>
-                </ul>
-                <div class="flex flex-col justify-center items-center gap-4 p-1">
-                    <ul class="flex flex-col justify-center items-center gap-2">
-                        <li>
-                            <button class="hover:bg-[#444] px-3 py-0.5 rounded-lg transition-all duration-300">
-                                <i class="fa-regular fa-bookmark"></i>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="hover:bg-[#444] px-3 py-0.5 rounded-lg transition-all duration-300">
-                                <i class="fa-regular fa-trash-can"></i>
-                            </button>
-                        </li>
-                    </ul>
-                    <a href="#" class="hover:bg-[#444] px-3 py-0.5 rounded-lg transition-all duration-300">
-                        <i class="fa-solid fa-gear"></i>
-                    </a>
-                </div>
-            </div>
-        </aside>
-
-        <main class="ml-[50px] h-screen fixed w-full pr-[50px] grid grid-cols-[300px_1fr] gap-0 text-[#ccc]">
-            <!-- friends list -->
-            <div class="z-49 bg-[#292d38] p-2 h-full
-            flex flex-col gap-5
-             overflow-y-scroll custom_for_scroll">
-              <div class="flex justify-between items-center p-1">
-                <div class="flex justify-start gap-3">
-                    <div class="w-[45px] h-[45px]">
-                        <img src="img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
-                    </div>
-                    <div class="flex flex-col">
-                        <span>User Name</span>
-                        <small>last Message</small>
-                    </div>
-                </div>
-                <div>
-                    <small>
-                        Last Active
-                    </small>
-                </div>
-              </div>
-              <div class="flex justify-between items-center p-1">
-                <div class="flex justify-start gap-3">
-                    <div class="w-[45px] h-[45px]">
-                        <img src="img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
-                    </div>
-                    <div class="flex flex-col">
-                        <span>User Name</span>
-                        <small>last Message</small>
-                    </div>
-                </div>
-                <div>
-                    <small>
-                        Last Active
-                    </small>
-                </div>
-              </div>
-              <div class="flex justify-between items-center p-1">
-                <div class="flex justify-start gap-3">
-                    <div class="w-[45px] h-[45px]">
-                        <img src="img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
-                    </div>
-                    <div class="flex flex-col">
-                        <span>User Name</span>
-                        <small>last Message</small>
-                    </div>
-                </div>
-                <div>
-                    <small>
-                        Last Active
-                    </small>
-                </div>
-              </div>
-              <div class="flex justify-between items-center p-1">
-                <div class="flex justify-start gap-3">
-                    <div class="w-[45px] h-[45px]">
-                        <img src="img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
-                    </div>
-                    <div class="flex flex-col">
-                        <span>User Name</span>
-                        <small>last Message</small>
-                    </div>
-                </div>
-                <div>
-                    <small>
-                        Last Active
-                    </small>
-                </div>
-              </div>
-            </div>
-          <!-- Sms -->
-            <div class="bg-[#1e1e1e] h-screen relative
-             overflow-x-scroll ">
-                <!-- Sms for Header-->
-                <div class="z-48 flex sticky top-0 justify-between items-center p-1 bg-[#292d38] shadow-2xl">
-                    <div class="flex justify-start gap-3">
-                        <div class="w-[45px] h-[45px]">
-                            <img src="img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
-                        </div>
-                        <div class="flex flex-col">
-                            <span>User Name</span>
-                            <small>last Online</small>
-                        </div>
-                    </div>
-                    <div class="mx-2">
-                        <ul class="flex justify-center items-center gap-2">
-                            <li>
-                                <button class="hover:bg-[#888] px-3 py-0.5 rounded-lg transition-all duration-300">
-                                    <i class="fa-solid fa-phone"></i>
-                                </button>
-                            </li>
-                            <li>
-                                <button class="hover:bg-[#888] px-3 py-0.5 rounded-lg transition-all duration-300">
-                                    <i class="fa-solid fa-video"></i>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Messaging -->
-                <div class="custom_for_scroll z-1 flex flex-col flex-grow p-4 text-white">
-                    <!-- Sent Message -->
-                    <div class="flex justify-end">
-                        <div class="bg-[#075E54] text-white px-4 py-2 rounded-xl
-                        rounded-br-none max-w-xs shadow-md">
-                            <p>Sent Message</p>
-                            <span class="text-xs text-gray-300 flex justify-end mt-1">Sented time
-                                <small class="translate-x-2 translate-y-0.5 text-blue-500 z-0">
-                                    <i class="fa-solid fa-check"></i>
-                                </small>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- Received Message -->
-                    <div class="flex justify-start">
-                        <div class="bg-[#2a2f32] text-white px-4 py-2 rounded-xl 
-                        rounded-bl-none max-w-xs shadow-md">
-                            <p>Resive Message</p>
-                            <span class="text-xs text-gray-400 flex justify-end mt-1">Sented time</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- sms for footer -->
-                <div class="z-49 fixed bottom-0 right-0 p-2 w-[75.7%] bg-[#292d38] flex items-center justify-center gap-1">
-                    <div class="bg-[#2a3942] p-2 flex items-center gap-3 rounded-xl text-white w-full mx-auto">
-                        <!-- Emoji Icon -->
-                        <button class="text-gray-400 hover:text-white">
-                            <i class="fa-regular fa-face-laugh"></i>
-                        </button>
+    <div  class="flex justify-center items-center min-h-screen w-full bg_custom">
+        <main
+          class="overflow-hidden relative w-[859px] h-[550px]
+        bg-[#ccc] rounded-[30px] shadow-2xl">
+            <div  id="container" class="z-[1] p-2 absolute right-0 w-1/2 h-full bg-[#ccc]
+             flex items-center text-[#333] text-center">
+                <form action="javascriptjavascript:void(0);" id="loginForm"
+                 class="w-full">
+                    <p class="text-3xl font-bold mx-0 my-10">Welcome back</p>
+                    <div class="relative mx-0 my-[30px]">
+                        <input type="email" id="loginEmail" name="" placeholder="Email"
                         
-                        <!-- Input Field -->
-                        <input
-                            type="text"
-                            placeholder="Message"
-                            class="bg-transparent flex-1 text-white placeholder-gray-500 focus:outline-none"
-                        />
+                        class="w-full p-[13px] pr-13 bg-[#eee] rounded-lg 
+                        border-0 outline-0 text-lg text-[#333] font-semibold
+                        placeholder-gray-500 placeholder:font-light">
+                        <small class="text-red-500 text-[10px]" id="loginEmailError"></small>
+
+                        <i class="fa-solid fa-at  absolute top-4 right-4 text-xl"></i>
+                    </div>
+                    <div class="relative mx-0 my-[30px]">
+                        <input type="password" id="loginPw" name=""placeholder="Password"
                         
-                        <!-- Attachment Icon -->
-                        <button class="text-gray-400 hover:text-white">
-                            <i class="fa-solid fa-paperclip"></i>
-                        </button>
-                        
-                        <!-- Mic Icon -->
-                        <button class="text-gray-400 hover:text-white">
-                            <i class="fa-solid fa-microphone"></i>
+                        class="w-full p-[13px] pr-13 bg-[#eee] rounded-lg 
+                        border-0 outline-0 text-lg text-[#333] font-semibold
+                        placeholder-gray-500 placeholder:font-light">
+                        <small class="text-red-500 text-[10px]" id="loginPwError"></small>
+
+                        <i class="fa-solid fa-key  absolute top-4 right-4 text-xl"></i>
+                    </div>
+                    <div class="-mt-[-25px] mb-[15px] text-[#333] text-md font-thin">
+                       <a href="#">Forgot Password?: </a>
+                    </div>
+                    <div>
+                        <button id="login"
+                         class="w-full p-2 bg-blue-500 rounded-lg shadow-md border-0
+                          cursor-pointer text-xl text-white font-semibold
+                          hover:bg-blue-600 hover:shadow-xl transition-all duration-200"
+                          >
+                            Login
                         </button>
                     </div>
-                    <button class="hover:text-white cursor-pointer px-1">
-                        <i class="fa-solid fa-paper-plane"></i>
+                    <span class="text-[14px] mx-0 my-[5px]">Or Login with</span>
+                    <div class="my-[15px]">
+                        <a href="#" class="group inline-flex p-2 mx-2 my-0
+                         border border-solid border-[#ccc] rounded-lg text-2xl text-gray-500
+                         hover:shadow-xl transition-all duration-100">
+                            <i class="fa-brands fa-google group-hover:text-[#4285F4] transition-all duration-100"></i>
+                        </a>
+                        <a href="#" class="group inline-flex p-2 mx-2 my-0
+                        border border-solid border-[#ccc] rounded-lg text-2xl text-gray-500
+                        hover:shadow-xl transition-all duration-100">
+                            <i class="fa-brands fa-apple group-hover:text-[#A2AAAD] transition-all duration-100"></i>
+                        </a>
+                        <a href="#" class="group inline-flex p-2 mx-2 my-0
+                        border border-solid border-[#ccc] rounded-lg text-2xl text-gray-500
+                        hover:shadow-xl transition-all duration-100">
+                            <i class="fa-brands fa-facebook group-hover:text-[#1877F2] transition-all duration-100"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+            <div  id="container" class="invisible z-[1] p-2 absolute left-0 w-1/2 h-full bg-[#ccc]
+             flex items-center text-[#333] text-center">
+                <form action=""
+                 class="w-full">
+                    <p class="text-3xl font-bold mx-0 my-10">Welcome</p>
+                    <div class="relative mx-0 my-[30px]">
+                        <input type="text" id="regName" name="" placeholder="Full name"
+                        required
+                        class="w-full p-[13px] pr-13 bg-[#eee] rounded-lg 
+                        border-0 outline-0 text-lg text-[#333] font-semibold
+                        placeholder-gray-500 placeholder:font-light">
+
+                        <i class="fa-solid fa-user  absolute top-4 right-4 text-xl"></i>
+                    </div>
+                    <div class="relative mx-0 my-[30px]">
+                        <input type="email" id="regEmail" name="" placeholder="Email"
+                        required
+                        class="w-full p-[13px] pr-13 bg-[#eee] rounded-lg 
+                        border-0 outline-0 text-lg text-[#333] font-semibold
+                        placeholder-gray-500 placeholder:font-light">
+
+                        <i class="fa-solid fa-at  absolute top-4 right-4 text-xl"></i>
+                    </div>
+                    <div class="relative mx-0 my-[30px]">
+                        <input type="password" id="regPw" name="" placeholder="Password"
+                        required
+                        class="w-full p-[13px] pr-13 bg-[#eee] rounded-lg 
+                        border-0 outline-0 text-lg text-[#333] font-semibold
+                        placeholder-gray-500 placeholder:font-light">
+
+                        <i class="fa-solid fa-key  absolute top-4 right-4 text-xl"></i>
+                    </div>
+                    <div>
+                        <button id="register"
+                         class="w-full p-2 bg-blue-500 rounded-lg shadow-md border-0
+                          cursor-pointer text-xl text-white font-semibold
+                          hover:bg-blue-600 hover:shadow-xl transition-all duration-200"
+                          >
+                            Register
+                        </button>
+                    </div>
+                    <span class="text-[14px] mx-0 my-[5px]">Or Register with</span>
+                    <div class="my-[15px]">
+                        <a href="#" class="group inline-flex p-2 mx-2 my-0
+                         border border-solid border-[#ccc] rounded-lg text-2xl text-gray-500
+                         hover:shadow-xl transition-all duration-100">
+                            <i class="fa-brands fa-google group-hover:text-[#4285F4] transition-all duration-100"></i>
+                        </a>
+                        <a href="#" class="group inline-flex p-2 mx-2 my-0
+                        border border-solid border-[#ccc] rounded-lg text-2xl text-gray-500
+                        hover:shadow-xl transition-all duration-100">
+                            <i class="fa-brands fa-apple group-hover:text-[#A2AAAD] transition-all duration-100"></i>
+                        </a>
+                        <a href="#" class="group inline-flex p-2 mx-2 my-0
+                        border border-solid border-[#ccc] rounded-lg text-2xl text-gray-500
+                        hover:shadow-xl transition-all duration-100">
+                            <i class="fa-brands fa-facebook group-hover:text-[#1877F2] transition-all duration-100"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="absolute w-full h-full">
+                <div class="custom_for_before"></div>
+                <div id="left"
+                    class="z-[20] absolute w-1/2 h-full flex flex-col justify-center left-0
+                    items-center text-white transition-all duration-700">
+                    <h3 class="text-2xl font-black">Hello Welcome</h3>
+                    <p class="m-7">
+                        Don't have an account
+                    </p>
+                    <button id="register_btn"
+                    class="px-4 py-2 bg-transparent rounded-lg shadow-md border border-gray-50
+                        cursor-pointer text-xl text-white font-semibold
+                        hover:bg-blue-600 hover:shadow-xl transition-all duration-200"
+                        >
+                        Register
+                    </button>
+                </div>
+                <div id="right"
+                class="z-[20] absolute w-1/2 h-full flex flex-col justify-center right-[-50%]
+                items-center text-white transition-all duration-700">
+                    <h3 class="text-2xl font-black">Hello Welcome back</h3>
+                    <p class="m-7">
+                        Already have an account
+                    </p>
+                    <button id="login_btn"
+                    class="px-4 py-2 bg-transparent rounded-lg shadow-md border border-gray-50
+                        cursor-pointer text-xl text-white font-semibold
+                        hover:bg-blue-600 hover:shadow-xl transition-all duration-200"
+                        >
+                        Login
                     </button>
                 </div>
             </div>
         </main>
     </div>
 
-    <!-- Unsupport -->
-    <div class="z-100 md:hidden fixed w-full h-full bg-gray-600 flex justify-center items-center">
-        <div class="p-4 rounded-lg bg-gray-100">
-            This screen side is not supported
-        </div>
-    </div> 
-
-
-<!-- <script src="js/index.js"></script> -->
-<script src="https://kit.fontawesome.com/34be1bc1b3.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/34be1bc1b3.js" crossorigin="anonymous"></script>
+    <script src="Auth/js/auth.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

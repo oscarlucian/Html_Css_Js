@@ -1,3 +1,4 @@
 .custom_for_scroll::-webkit-scrollbar {
-    display: none;
+    width: 2px;
+    background: linear-gradient(0deg,#654321,#123456);
 }

@@ -26,3 +26,34 @@ login_btn.addEventListener("click", ()=> {
         visibelity.classList.toggle('invisible');
       });
   });
+
+// Form Validation
+const loginForm = document.getElementById("loginForm")
+const loginEmail = document.getElementById("loginEmail");
+const loginPw = document.getElementById("loginPw");
+const regName = document.getElementById("loginName");
+const regEmail = document.getElementById("regEmail");
+const regPw = document.getElementById("regPw");
+// login
+
+loginForm.addEventListener("submit", (e)=>{
+  e.preventDefault();
+  if(loginEmail.value === "" && loginPw.value === ""){
+    document.getElementById("loginPwError").innerText = "Password is required";
+    document.getElementById("loginEmailError").innerText = "Email is required";
+
+  }else{    
+    if (loginEmail.value === "") {
+      document.getElementById("loginEmailError").innerText = "Email is required";
+    }else if (loginPw.value === "") {
+        document.getElementById("loginPwError").innerText = "Password is required";
+    }else {
+      document.getElementById("loginEmailError").innerText = "";
+  
+      function redirect(url) {
+        window.location.href = url;
+      }
+        redirect("a/");
+    }
+  }
+});

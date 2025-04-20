@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflection</title>
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="icon" type="image/ico" href="../img/Logo/icon.ico">
+    <link rel="stylesheet" href="../src/custom.css">
+</head>
+<body>
+    <div class="hidden md:block">
+        <!-- Header and nav -->
+        <header class="z-50 sticky top-0 flex justify-between items-center bg-[#bdadad] p-1">
+            <div class="w-[45px] h-[45px]">
+                <img src="../img/Logo/logo.png" alt="Logo" class="w-full h-full rounded-sm">
+            </div>
+            <nav class="flex">
+                <ul class="relative flex bg-[#d5c9c9] mx-2 rounded-xl py-1 px-2">
+                    <div id="hover_box" class="absolute h-full w-25 bg-[#292d38] rounded-xl z-0 -translate-x-2 -translate-y-1"></div>
+                    <li class="mr-2 z-1">
+                        <a href=""
+                        class=" text-[#ccc] px-3 py-1 rounded-xl transition-all duration-300">
+                        <i class="fa-solid fa-house"></i> Home
+                        </a>
+                    </li>
+                    <li class="mx-1">
+                        <a href=""
+                        class="hover:bg-[#292d38] hover:text-[#ccc] text-[#555]
+                         px-3 py-1 rounded-xl transition-all duration-300"
+                        >
+                            Social
+                        </a>
+                    </li>
+                    <li class="mx-1">
+                        <a href=""
+                        class="hover:bg-[#292d38] hover:text-[#ccc] text-[#555]
+                         px-3 py-1 rounded-xl transition-all duration-300"
+                        >
+                            Servicces
+                        </a>
+                    </li>
+                    <li class="mx-1">
+                        <a href=""
+                        class="hover:bg-[#292d38] hover:text-[#ccc] text-[#555]
+                         px-3 py-1 rounded-xl transition-all duration-300"
+                        >
+                            About
+                        </a>
+                    </li>
+                    <li  class="ml-2">
+                        <a href=""
+                        class="hover:bg-[#292d38] hover:text-[#ccc] text-[#555]
+                         px-3 py-1 rounded-xl transition-all duration-300"
+                        >
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+                <div>
+                    <button
+                    class="hover:bg-[#292d38] hover:text-[#ccc] text-[#555]
+                     bg-[#d5c9c9] mx-1 rounded-xl px-3 py-1 transition-all duration-300"
+                    >
+                        Settings
+                    </button>
+                </div>
+
+                <div>
+                    <a href="profile.html"
+                    class="hover:bg-[#292d38] hover:text-[#ccc] text-[#555]
+                     bg-[#d5c9c9] mx-1 rounded-xl px-3 py-1 transition-all duration-300"
+                    >
+                    <i class="fa-regular fa-circle-user"></i>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <!-- side bar -->
+        <aside class=" z-49 fixed left-0 top-0 h-full w-[50px] bg-[#151517] p-1 pt-15" >
+            <div class="h-full flex flex-col justify-between items-center text-[#ccc]">
+                <ul class="flex flex-col justify-center items-center gap-7
+                border-b pb-2">
+                    <li class="relative">
+                        <small class="absolute -right-1 -top-1 px-1 rounded-xl bg-red-400 text-white text-[8px]">
+                            90+
+                        </small>
+                        <a href="#" class="bg-[#444] px-3 py-0.5 rounded-lg transition-all duration-300">
+                            <i class="fa-regular fa-message"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:bg-[#444] px-3 py-0.5 rounded-lg transition-all duration-300">
+                            <i class="fa-solid fa-phone-slash"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:bg-[#444] px-3 py-0.5 rounded-lg transition-all duration-300">
+                            <i class="fa-regular fa-comment-dots"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="flex flex-col justify-center items-center gap-4 p-1">
+                    <ul class="flex flex-col justify-center items-center gap-2">
+                        <li>
+                            <button class="hover:bg-[#444] px-3 py-0.5 rounded-lg transition-all duration-300">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="hover:bg-[#444] px-3 py-0.5 rounded-lg transition-all duration-300">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                        </li>
+                    </ul>
+                    <a href="#" class="hover:bg-[#444] px-3 py-0.5 rounded-lg transition-all duration-300">
+                        <i class="fa-solid fa-gear"></i>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="ml-[50px] h-screen fixed w-full pr-[50px] grid grid-cols-[300px_1fr] gap-0 text-[#ccc]">
+            <!-- friends list -->
+            <div class="z-49 bg-[#292d38] p-2 h-full
+            flex flex-col gap-5
+             overflow-y-scroll custom_for_scroll">
+              <div class="flex justify-between items-center p-1">
+                <div class="flex justify-start gap-3">
+                    <div class="w-[45px] h-[45px]">
+                        <img src="../img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
+                    </div>
+                    <div class="flex flex-col">
+                        <span>User Name</span>
+                        <small>last Message</small>
+                    </div>
+                </div>
+                <div>
+                    <small>
+                        Last Active
+                    </small>
+                </div>
+              </div>
+              <div class="flex justify-between items-center p-1">
+                <div class="flex justify-start gap-3">
+                    <div class="w-[45px] h-[45px]">
+                        <img src="../img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
+                    </div>
+                    <div class="flex flex-col">
+                        <span>User Name</span>
+                        <small>last Message</small>
+                    </div>
+                </div>
+                <div>
+                    <small>
+                        Last Active
+                    </small>
+                </div>
+              </div>
+              <div class="flex justify-between items-center p-1">
+                <div class="flex justify-start gap-3">
+                    <div class="w-[45px] h-[45px]">
+                        <img src="../img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
+                    </div>
+                    <div class="flex flex-col">
+                        <span>User Name</span>
+                        <small>last Message</small>
+                    </div>
+                </div>
+                <div>
+                    <small>
+                        Last Active
+                    </small>
+                </div>
+              </div>
+              <div class="flex justify-between items-center p-1">
+                <div class="flex justify-start gap-3">
+                    <div class="w-[45px] h-[45px]">
+                        <img src="../img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
+                    </div>
+                    <div class="flex flex-col">
+                        <span>User Name</span>
+                        <small>last Message</small>
+                    </div>
+                </div>
+                <div>
+                    <small>
+                        Last Active
+                    </small>
+                </div>
+              </div>
+            </div>
+          <!-- Sms -->
+            <div class="bg-[#1e1e1e] h-screen relative pb-24
+             overflow-x-scroll ">
+                <!-- Sms for Header-->
+                <div class="z-48 flex sticky top-0 justify-between items-center p-1 bg-[#292d38] shadow-2xl">
+                    <div class="flex justify-start gap-3">
+                        <div class="w-[45px] h-[45px]">
+                            <img src="../img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
+                        </div>
+                        <div class="flex flex-col">
+                            <span>User Name</span>
+                            <small>last Online</small>
+                        </div>
+                    </div>
+                    <div class="mx-2">
+                        <ul class="flex justify-center items-center gap-2">
+                            <li>
+                                <button class="hover:bg-[#888] px-3 py-0.5 rounded-lg transition-all duration-300">
+                                    <i class="fa-solid fa-phone"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hover:bg-[#888] px-3 py-0.5 rounded-lg transition-all duration-300">
+                                    <i class="fa-solid fa-video"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Messaging -->
+                <div class="custom_for_scroll z-1 flex flex-col flex-grow p-4 text-white">
+                    <!-- Sent Message -->
+                    <div class="flex justify-end">
+                        <div class="bg-[#075E54] text-white px-4 py-2 rounded-xl
+                        rounded-br-none max-w-xs shadow-md">
+                            <p>Sent Message</p>
+                            <span class="text-xs text-gray-300 flex justify-end mt-1">Sented time
+                                <small class="translate-x-2 translate-y-0.5 text-blue-500 z-0">
+                                    <i class="fa-solid fa-check"></i>
+                                </small>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Received Message -->
+                    <div class="flex justify-start">
+                        <div class="bg-[#2a2f32] text-white px-4 py-2 rounded-xl 
+                        rounded-bl-none max-w-xs shadow-md">
+                            <p>Resive Message</p>
+                            <span class="text-xs text-gray-400 flex justify-end mt-1">Sented time</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- sms for footer -->
+                <div class="z-49 fixed bottom-0 right-0 p-2 w-full bg-[#292d38]">
+                    <div class="relative w-full h-10">
+                        <div class="flex items-center justify-end w-[50%] gap-1 
+                        absolute end-2">
+                            <div class="bg-[#2a3942] p-2 flex items-center gap-3
+                             rounded-xl text-white w-full mx-auto">
+                                <!-- Emoji Icon -->
+                                <button class="text-gray-400 hover:text-white">
+                                    <i class="fa-regular fa-face-laugh"></i>
+                                </button>
+                                
+                                <!-- Input Field -->
+                                <input
+                                    type="text"
+                                    placeholder="Message"
+                                    class="bg-transparent flex-1 text-white placeholder-gray-500 focus:outline-none"
+                                />
+                                
+                                <!-- Attachment Icon -->
+                                <button class="text-gray-400 hover:text-white">
+                                    <i class="fa-solid fa-paperclip"></i>
+                                </button>
+                                
+                                <!-- Mic Icon -->
+                                <button class="text-gray-400 hover:text-white">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </button>
+                            </div>
+                            <button class="hover:text-white cursor-pointer px-1">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Unsupport -->
+    <div class="z-100 md:hidden fixed w-full h-full bg-gray-600 flex justify-center items-center">
+        <div class="p-4 rounded-lg bg-gray-100">
+            This screen size is not supported
+        </div>
+    </div> 
+
+
+<!-- <script src="js/index.js"></script> -->
+<script src="https://kit.fontawesome.com/34be1bc1b3.js" crossorigin="anonymous"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
