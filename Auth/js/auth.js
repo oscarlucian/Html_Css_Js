@@ -27,33 +27,49 @@ login_btn.addEventListener("click", ()=> {
       });
   });
 
+
 // Form Validation
-const loginForm = document.getElementById("loginForm")
+const loginForm = document.getElementById("loginForm");
 const loginEmail = document.getElementById("loginEmail");
 const loginPw = document.getElementById("loginPw");
-const regName = document.getElementById("loginName");
+const regName = document.getElementById("regName");
 const regEmail = document.getElementById("regEmail");
 const regPw = document.getElementById("regPw");
-// login
 
-loginForm.addEventListener("submit", (e)=>{
+
+loginForm.addEventListener("submit", function(e) {
   e.preventDefault();
-  if(loginEmail.value === "" && loginPw.value === ""){
-    document.getElementById("loginPwError").innerText = "Password is required";
-    document.getElementById("loginEmailError").innerText = "Email is required";
 
-  }else{    
-    if (loginEmail.value === "") {
-      document.getElementById("loginEmailError").innerText = "Email is required";
-    }else if (loginPw.value === "") {
-        document.getElementById("loginPwError").innerText = "Password is required";
-    }else {
-      document.getElementById("loginEmailError").innerText = "";
-  
-      function redirect(url) {
-        window.location.href = url;
-      }
-        redirect("a/");
-    }
+  document.getElementById("loginEmailError").innerText = "";
+  document.getElementById("loginPwError").innerText = "";
+  const email = loginEmail.value;
+  const password = loginPw.value;
+
+  if (email === "" && password === "") {
+    document.getElementById("loginEmailError").innerText = "Email is required";
+    document.getElementById("loginPwError").innerText = "Password is required";
+    return;
   }
+
+  if (email === "") {
+    document.getElementById("loginEmailError").innerText = "Email is required";
+    return;
+  }
+
+  if (password === "") {
+    document.getElementById("loginPwError").innerText = "Password is required";
+    return;
+  }
+
+  if (email !== "example@example.e") {
+    document.getElementById("loginEmailError").innerText = "Incorrect email";
+
+    if (password !== "admin123") {
+      document.getElementById("loginPwError").innerText = "Incorrect password";
+    }
+    return;
+  }
+
+  window.location.href = "a/";
 });
+

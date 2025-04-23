@@ -17,39 +17,39 @@
             </div>
             <nav class="flex">
                 <ul class="relative flex bg-[#d5c9c9] mx-2 rounded-xl py-1 px-2">
-                    <div id="hover_box" class="absolute h-full w-25 bg-[#292d38] rounded-xl z-0 -translate-x-2 -translate-y-1"></div>
-                    <li class="mr-2 z-1">
-                        <a href=""
-                        class=" text-[#ccc] px-3 py-1 rounded-xl transition-all duration-300">
-                        <i class="fa-solid fa-house"></i> Home
+                    <div id="hover_box"></div>
+                    <li class="mr-2 z-2">
+                        <a href="" id="textColorHome"
+                        class="px-3 py-1 rounded-xl hover:bg-[#292d38] hover:text-[#ccc] transition-all duration-300">
+                            <i class="icon"></i> Chat
                         </a>
                     </li>
-                    <li class="mx-1">
-                        <a href=""
+                    <li class="mx-1 z-2">
+                        <a href="discover.html" id="textColorDis"
                         class="hover:bg-[#292d38] hover:text-[#ccc] text-[#555]
-                         px-3 py-1 rounded-xl transition-all duration-300"
+                         px-3 py-1 rounded-xl transition-all duration-300 "
                         >
-                            Social
+                            <i class="icon"></i>  discover
                         </a>
                     </li>
-                    <li class="mx-1">
-                        <a href=""
+                    <li class="mx-1 z-2">
+                        <a href="" id="textColor"
                         class="hover:bg-[#292d38] hover:text-[#ccc] text-[#555]
                          px-3 py-1 rounded-xl transition-all duration-300"
                         >
                             Servicces
                         </a>
                     </li>
-                    <li class="mx-1">
-                        <a href=""
+                    <li class="mx-1 z-2">
+                        <a href="" id="textColor"
                         class="hover:bg-[#292d38] hover:text-[#ccc] text-[#555]
                          px-3 py-1 rounded-xl transition-all duration-300"
                         >
                             About
                         </a>
                     </li>
-                    <li  class="ml-2">
-                        <a href=""
+                    <li  class="ml-2 z-2">
+                        <a href="" id="textColor"
                         class="hover:bg-[#292d38] hover:text-[#ccc] text-[#555]
                          px-3 py-1 rounded-xl transition-all duration-300"
                         >
@@ -67,12 +67,36 @@
                 </div>
 
                 <div>
-                    <a href="profile.html"
-                    class="hover:bg-[#292d38] hover:text-[#ccc] text-[#555]
-                     bg-[#d5c9c9] mx-1 rounded-xl px-3 py-1 transition-all duration-300"
-                    >
-                    <i class="fa-regular fa-circle-user"></i>
-                    </a>
+                    <button id="btnProfile"
+                        class="hover:bg-[#292d38] hover:text-[#ccc] text-[#555]
+                        bg-[#d5c9c9] mx-1 rounded-xl px-3 py-1 transition-all duration-300"
+                        >
+                        <i class="fa-regular fa-circle-user"></i>
+                    </button>
+                    <!-- ProfilePopUp -->
+                     <div id="ProfilePopUp"
+                      class="z-50 fixed right-2 backdrop-blur-md py-2 px-5 rounded-md
+                      transition-all duration-500
+                      scale-[0]">
+                        <div class="flex justify-between items-center p-1">
+                            <div class="flex flex-col justify-center items-center gap-3">
+                                <div class="w-[100px] h-[100px]">
+                                    <img src="../img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
+                                </div>
+                                <div class="text-[#ccc]">
+                                    <a href="profile.html">
+                                        User Name
+                                    </a>
+                                </div>
+                                <div>
+                                    <button id="logOutBtn"
+                                     class="py-1 px-10 bg-[#2d7efc] text-[#ccc] rounded-xl cursor-pointer">
+                                        Log out
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
                 </div>
             </nav>
         </header>
