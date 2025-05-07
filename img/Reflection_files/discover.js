@@ -3,15 +3,8 @@
 let indexSearchBtn = document.getElementById("indexSearchBtn");
 let indexSearchBar = document.getElementById("indexSearchBar");
 indexSearchBtn.addEventListener("click",()=>{
-  indexSearchBar.classList.remove("hidden");
-});
-
-indexSearchBar.addEventListener("click", (e)=>{
-  // console.log(e.target);
-  
-  if(e.target === indexSearchBar){
-    indexSearchBar.classList.add("hidden");
-  }
+  indexSearchBar.classList.toggle("-top-[100%]");
+  indexSearchBar.classList.toggle("top-[10%]");
 });
 
 // Noti

@@ -9,11 +9,15 @@
     <link rel="stylesheet" href="Auth/css/index.css">
 </head>
 <body>
-    <div  class="flex justify-center items-center min-h-screen w-full bg_custom">
+
+<div id="welcomeModal"> </div>
+    <div  class="flex flex-col justify-center items-center min-h-screen w-full bg_custom">
         <main
           class="overflow-hidden relative w-[859px] h-[550px]
         bg-[#ccc] rounded-[30px] shadow-2xl">
-            <div  id="container" class="z-[1] p-2 absolute right-0 w-1/2 h-full bg-[#ccc]
+
+            <div  id="container"
+             class="z-[1] p-2 absolute right-0 w-1/2 h-full bg-[#ccc]
              flex items-center text-[#333] text-center">
                 <form action="javascriptjavascript:void(0);" id="loginForm"
                  class="w-full">
@@ -70,40 +74,41 @@
                     </div>
                 </form>
             </div>
-            <div  id="container" class="invisible z-[1] p-2 absolute left-0 w-1/2 h-full bg-[#ccc]
+            <div  id="container"
+             class="invisible z-[1] p-2 absolute left-0 w-1/2 h-full bg-[#ccc]
              flex items-center text-[#333] text-center">
-                <form action=""
+                <form action="" id="regForm"
                  class="w-full">
                     <p class="text-3xl font-bold mx-0 my-10">Welcome</p>
                     <div class="relative mx-0 my-[30px]">
                         <input type="text" id="regName" name="" placeholder="Full name"
-                        required
                         class="w-full p-[13px] pr-13 bg-[#eee] rounded-lg 
                         border-0 outline-0 text-lg text-[#333] font-semibold
                         placeholder-gray-500 placeholder:font-light">
+                        <small class="text-red-500 text-[10px]" id="regNameError"></small>
 
                         <i class="fa-solid fa-user  absolute top-4 right-4 text-xl"></i>
                     </div>
                     <div class="relative mx-0 my-[30px]">
                         <input type="email" id="regEmail" name="" placeholder="Email"
-                        required
                         class="w-full p-[13px] pr-13 bg-[#eee] rounded-lg 
                         border-0 outline-0 text-lg text-[#333] font-semibold
                         placeholder-gray-500 placeholder:font-light">
+                        <small class="text-red-500 text-[10px]" id="regEmailError"></small>
 
                         <i class="fa-solid fa-at  absolute top-4 right-4 text-xl"></i>
                     </div>
                     <div class="relative mx-0 my-[30px]">
                         <input type="password" id="regPw" name="" placeholder="Password"
-                        required
                         class="w-full p-[13px] pr-13 bg-[#eee] rounded-lg 
                         border-0 outline-0 text-lg text-[#333] font-semibold
                         placeholder-gray-500 placeholder:font-light">
+                        <small class="text-red-500 text-[10px]" id="regPwError"></small>
 
                         <i class="fa-solid fa-key  absolute top-4 right-4 text-xl"></i>
                     </div>
                     <div>
-                        <button id="register"
+                        <button id="register" type="submit"
                          class="w-full p-2 bg-blue-500 rounded-lg shadow-md border-0
                           cursor-pointer text-xl text-white font-semibold
                           hover:bg-blue-600 hover:shadow-xl transition-all duration-200"
@@ -165,11 +170,11 @@
                     </button>
                 </div>
             </div>
+
         </main>
     </div>
 
     <script src="https://kit.fontawesome.com/34be1bc1b3.js" crossorigin="anonymous"></script>
     <script src="Auth/js/auth.js"></script>
-    <script src="js/main.js"></script>
 </body>
 </html>

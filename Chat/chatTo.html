@@ -25,7 +25,7 @@
                         </a>
                     </li>
                     <li class="mx-1 z-2">
-                        <a href="discover.html" id="textColorDis"
+                        <a href="/a/discover.html" id="textColorDis"
                         class="hover:bg-[#292d38] hover:text-[#ccc] text-[#555]
                          px-1 md:px-3 py-0.5 md:py-1 md:text-lg text-sm rounded-xl transition-all duration-300 "
                         >
@@ -156,8 +156,7 @@
             flex flex-col gap-5
              overflow-y-scroll
               custom_for_scroll">
-              <div id="chatTo"
-               class="flex justify-between items-center p-1 cursor-pointer">
+              <div class="flex justify-between items-center p-1 cursor-pointer">
                 <div class="flex justify-start gap-3">
                     <div class="w-[45px] h-[45px]">
                         <img src="/img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
@@ -173,8 +172,7 @@
                     </small>
                 </div>
               </div>
-              <div id="chatTo"
-               class="flex justify-between items-center p-1 cursor-pointer">
+              <div class="flex justify-between items-center p-1 cursor-pointer">
                 <div class="flex justify-start gap-3">
                     <div class="w-[45px] h-[45px]">
                         <img src="/img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
@@ -190,8 +188,7 @@
                     </small>
                 </div>
               </div>
-              <div id="chatTo"
-               class="flex justify-between items-center p-1 cursor-pointer">
+              <div class="flex justify-between items-center p-1 cursor-pointer">
                 <div class="flex justify-start gap-3">
                     <div class="w-[45px] h-[45px]">
                         <img src="/img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
@@ -207,8 +204,7 @@
                     </small>
                 </div>
               </div>
-              <div id="chatTo"
-               class="flex justify-between items-center p-1 cursor-pointer">
+              <div class="flex justify-between items-center p-1 cursor-pointer">
                 <div class="flex justify-start gap-3">
                     <div class="w-[45px] h-[45px]">
                         <img src="/img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
@@ -226,12 +222,149 @@
               </div>
             </div>
           <!-- Sms -->
-            <div class="bg-[#1e1e1e] h-screen w-full flex
-             justify-center items-center">
-               
-                <div class="custom_image">
-                    <img src="https://www.tawk.to/wp-content/uploads/2020/08/chat-pages-link.png" alt=""
-                    class="h-full w-full">
+            <div id="mainBody"
+             class="bg-[#1e1e1e] h-screen relative pb-24
+             overflow-x-scroll  overflow-y-auto">
+
+                <!-- Sms for Header-->
+                <div class="z-48 flex sticky top-0 justify-between items-center p-1 bg-[#292d38] shadow-2xl">
+                    <div class="flex justify-start gap-3">
+                        <div class="w-[45px] h-[45px]">
+                            <img src="/img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
+                        </div>
+                        <div class="flex flex-col">
+                            <span>User Name</span>
+                            <small>last Online</small>
+                        </div>
+                    </div>
+                    <div class="mx-2">
+                        <ul class="flex justify-center items-center gap-2">
+                            <li>
+                                <button class="hover:bg-[#888] px-3 py-0.5 rounded-lg transition-all duration-300">
+                                    <i class="fa-solid fa-phone"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hover:bg-[#888] px-3 py-0.5 rounded-lg transition-all duration-300">
+                                    <i class="fa-solid fa-video"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Message User Info -->
+                <div class="flex justify-center items-center">
+                    <div class="w-[30%] m-3 p-2 bg-[#292d38] rounded-md flex flex-col gap-1 justify-center items-center">
+                        <div class="w-[70px] h-[70px] rounded-[50%] border border-[#aaa]">
+                            <img src="/img/Logo/user.png" alt="" class="w-full h-full rounded-[50%] m-auto">
+                        </div>
+                        <div>
+                            <a href="#" class="text-md">User Name</a>
+                        </div>
+                        <div> 
+                            <span class="text-xs">Account Status</span>
+                        </div>
+                        <div class="flex justify-between gap-5 text-sm">
+                            <button class="bg-[#444] rounded-xl px-5 py-1 text-green-400 hover:text-green-500 cursor-pointer">
+                                Add Friend
+                            </button>
+                            <button class="bg-[#444] rounded-xl px-5 py-1 text-red-400 hover:text-red-500  cursor-pointer">
+                                Block
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Messaging -->
+                <div id="chatBody"
+                 class="custom_for_scroll z-1 flex flex-col flex-grow p-4 text-white">
+                    <!-- Sent Message -->
+                    <div class="flex justify-end mt-1 items-center gap-2">
+                        <button id="sentMessage_Info"
+                        class="cursor-pointer p-2 ">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                        <div class="relative bg-[#075E54] text-white px-4 py-2 rounded-xl
+                        rounded-br-none max-w-xs shadow-md">
+                            <p>Sent Message</p>
+                            <span class="text-xs text-gray-300 flex justify-end mt-1">Sented time
+                                <small class="translate-x-2 translate-y-0.5 text-blue-500 z-0">
+                                    <i class="fa-solid fa-check"></i>
+                                </small>
+                            </span>
+
+                        <div class="absolute px-4 py-2 rounded-xl -left-[170%] w-[200px] bg-amber-500">
+                              <ul>
+                                <li>
+                                    Info
+                                </li>
+                                <li>
+                                    Copy
+                                </li>
+                                <li>
+                                    Edit
+                                </li>
+                                <li>
+                                    Delete
+                                </li>
+                              </ul>  
+                        </div>
+                        </div>
+                    </div>
+                    <!-- Received Message -->
+                    <div class="flex justify-start mt-1 items-center gap-2">
+                        <div class="bg-[#2a2f32] text-white px-4 py-2 rounded-xl 
+                        rounded-bl-none max-w-xs shadow-md">
+                            <p>Resive Message</p>
+                            <span class="text-xs text-gray-400 flex justify-end mt-1">Sented time</span>
+                        </div>
+                        <button class="cursor-pointer p-2">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- sms for footer -->
+                <div class="z-49 fixed bottom-0 right-0 p-2 w-full bg-[#292d38]
+                hidden md:inline">
+                    <div class="relative w-full h-10">
+                        <form  action="javascriptjavascript:void(0);" 
+                            id="chatForm"
+                            class="flex items-center justify-end w-[50%] gap-1 
+                            absolute end-2">
+                            <div
+                            class="bg-[#2a3942] p-2 flex items-center gap-3
+                             rounded-xl text-white w-full mx-auto">
+                                <!-- Emoji Icon -->
+                                <button type="button"
+                                 class="text-gray-400 hover:text-white">
+                                    <i class="fa-regular fa-face-laugh"></i>
+                                </button>
+                                
+                                <!-- Input Field -->
+                                <input id="chatValue"
+                                    type="text"
+                                    placeholder="Message"
+                                    class="bg-transparent flex-1 text-white placeholder-gray-500 focus:outline-none"
+                                />
+                                
+                                <!-- Attachment Icon -->
+                                <button type="button"
+                                 class="text-gray-400 hover:text-white">
+                                    <i class="fa-solid fa-paperclip"></i>
+                                </button>
+                                
+                                <!-- Mic Icon -->
+                                <button type="button"
+                                 class="text-gray-400 hover:text-white">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </button>
+                            </div>
+                            <button id="chatSent" type="submit"
+                             class="hover:text-white cursor-pointer px-1">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </main>
@@ -248,5 +381,6 @@
 <!-- <script src="js/index.js"></script> -->
 <script src="https://kit.fontawesome.com/34be1bc1b3.js" crossorigin="anonymous"></script>
 <script src="/js/main.js"></script>
+<script src="/js/chat.js"></script>
 </body>
 </html>

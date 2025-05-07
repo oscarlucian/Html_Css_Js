@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reflection</title>
-    <link rel="stylesheet" href="../src/output.css">
-    <link rel="icon" type="image/ico" href="../img/Logo/icon.ico">
-    <link rel="stylesheet" href="../src/custom.css">
+    <link rel="stylesheet" href="/src/output.css">
+    <link rel="icon" type="image/ico" href="/img/Logo/icon.ico">
+    <link rel="stylesheet" href="/src/custom.css">
 </head>
 <body>
     <div>
         <!-- Header and nav -->
         <header class="z-50 sticky top-0 flex justify-between items-center bg-[#bdadad] p-1">
             <div class="w-[45px] h-[45px] hidden md:inline">
-                <img src="../img/Logo/logo.png" alt="Logo" class="w-full h-full rounded-sm">
+                <img src="/img/Logo/logo.png" alt="Logo" class="w-full h-full rounded-sm">
             </div>
             <nav class="flex">
                 <ul class="relative flex bg-[#d5c9c9] mx-0.5 md:mx-2 rounded-xl py-0.5 md:py-1 px-0.5 md:px-2">
@@ -26,7 +26,7 @@
                     </li>
                     <li class="mx-1 z-2">
                         <a href="#" id="textColorDis"
-                        class="hover:bg-[#292d38] hover:text-[#ccc] text-[#555]
+                        class="hover:text-[#ccc] text-[#555]
                          px-1 md:px-3 py-0.5 md:py-1 rounded-xl transition-all duration-300 "
                         >
                             <i class="icon"></i>  discover
@@ -76,12 +76,12 @@
                     <!-- ProfilePopUp -->
                      <div id="ProfilePopUp"
                       class="z-50 fixed right-2 backdrop-blur-md py-2 px-5 rounded-md
-                      transition-all duration-500
+                      transition-all duration-700
                       scale-[0]">
                         <div class="flex justify-between items-center p-1">
                             <div class="flex flex-col justify-center items-center gap-3">
                                 <div class="w-[100px] h-[100px]">
-                                    <img src="../img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
+                                    <img src="/img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
                                 </div>
                                 <div class="text-[#ccc]">
                                     <a href="profile.html">
@@ -114,9 +114,9 @@
                        </button>
                        <!-- Search Bar -->
                        <div id="indexSearchBar"
-                        class="fixed w-full -top-[100%] transition-all duration-200">
-                            <div class="flex justify-center"> 
-                                <div class="w-full max-w-xl relative bg-[#2A2D38] rounded-2xl opacity-98">
+                        class="z-40 fixed inset-0 transition-all duration-200 hidden">
+                            <div class="flex justify-center mx-3 sm:mx-0 mt-[10%]"> 
+                                <div class="w-[80%] sm:w-full max-w-xl relative bg-[#2A2D38] rounded-2xl opacity-98">
                                     <div class="absolute text-xl z-1 left-4 top-1/2 transform -translate-y-1/2 text-gray-500">
                                         <i class="fa-solid fa-magnifying-glass"></i>
                                     </div>
@@ -162,9 +162,9 @@
                             </button>
                         </li>
                         <li>
-                            <button class="hover:bg-[#444] px-3 py-0.5 rounded-lg transition-all duration-300">
+                            <a href="D/online_shop.html" class="hover:bg-[#444] px-3 py-0.5 rounded-lg transition-all duration-300">
                                 <i class="fa-solid fa-cart-shopping"></i>
-                            </button>
+                            </a>
                         </li>
                     </ul>
                     <a href="#" class="hover:bg-[#444] px-3 py-0.5 rounded-lg transition-all duration-300">
@@ -189,7 +189,7 @@
 
             <div id="notiContactPopup"
              class="fixed -bottom-[100%] right-1 w-[400px] h-[300px] pb-1 rounded-2xl border
-             backdrop-blur-md overflow-y-auto custom_for_scroll transition-all duration-300">
+             backdrop-blur-3xl overflow-y-auto custom_for_scroll transition-all duration-300">
                 <div class="p-4 sticky top-0 rounded-t-2xl bg-[#2A2C37]">
                     <div class="relative">
                         <h3 class="text-center text-xl text-[#ddd]">
@@ -205,7 +205,7 @@
                     <div class="flex justify-between items-center p-1 rounded-xl border">
                         <div class="flex justify-start gap-3">
                             <div class="w-[45px] h-[45px]">
-                                <img src="../img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
+                                <img src="/img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
                             </div>
                             <div class="flex flex-col">
                                 <span>User rate to your <a href="#" class="text-blue-500">Post</a></span>
@@ -221,7 +221,7 @@
                     <div class="flex justify-between items-center p-1 rounded-xl border">
                         <div class="flex justify-start gap-3">
                             <div class="w-[45px] h-[45px]">
-                                <img src="../img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
+                                <img src="/img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
                             </div>
                             <div class="flex flex-col">
                                 <span>User rate to your <a href="#" class="text-blue-500">Post</a></span>
@@ -237,7 +237,7 @@
                     <div class="flex justify-between items-center p-1 rounded-xl border">
                         <div class="flex justify-start gap-3">
                             <div class="w-[45px] h-[45px]">
-                                <img src="../img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
+                                <img src="/img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
                             </div>
                             <div class="flex flex-col">
                                 <span>User rate to your <a href="#" class="text-blue-500">Post</a></span>
@@ -253,7 +253,7 @@
                     <div class="flex justify-between items-center p-1 rounded-xl border">
                         <div class="flex justify-start gap-3">
                             <div class="w-[45px] h-[45px]">
-                                <img src="../img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
+                                <img src="/img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
                             </div>
                             <div class="flex flex-col">
                                 <span>User rate to your <a href="#" class="text-blue-500">Post</a></span>
@@ -269,7 +269,7 @@
                     <div class="flex justify-between items-center p-1 rounded-xl border">
                         <div class="flex justify-start gap-3">
                             <div class="w-[45px] h-[45px]">
-                                <img src="../img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
+                                <img src="/img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
                             </div>
                             <div class="flex flex-col">
                                 <span>User rate to your <a href="#" class="text-blue-500">Post</a></span>
@@ -285,7 +285,7 @@
                     <div class="flex justify-between items-center p-1 rounded-xl border">
                         <div class="flex justify-start gap-3">
                             <div class="w-[45px] h-[45px]">
-                                <img src="../img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
+                                <img src="/img/Logo/user.png" alt="Profile" class="h-full w-full rounded-[50%]">
                             </div>
                             <div class="flex flex-col">
                                 <span>User rate to your <a href="#" class="text-blue-500">Post</a></span>
@@ -302,9 +302,166 @@
             </div>
         </div>
 
-        <!-- <main class="ml-[50px]">
-
-        </main> -->
+        <main class="ml-[50px]">
+            <!-- Slider -->
+            <div class="mb-5">
+                <div class="relative aspect-[calc(4*2)/3]">
+                    <img src="/img/slider1.png" alt="" class="w-full h-full" >
+                    <!-- <div class="absolute inset-0 text-center">
+                        <h2>Enjoy Now</h2>
+                    </div> -->
+                </div>
+            </div>
+            <!-- Cards -->
+             <div class=" w-[80%] m-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-y-5 gap-x-10">
+                    <div class="relative rounded-xl overflow-hidden bg-[#eee] shadow-xl text-center
+                    hover:scale-[1.01] hover:-translate-y-1 transition-all duration-200">
+                        <div class="relative w-full rounded-xl">
+                          <div class="aspect-3/2">
+                            <img src="/img/carS.webp" alt=""
+                            class="rounded-tl-xl rounded-tr-xl w-full h-full">
+                          </div>
+                          <svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                          class="absolute bottom-0 left-0 w-full h-[50px]">
+                            <path d="M0,30 C150,80 350,0 500,30 L500,150 L0,150 Z" style="fill:#eee;" />
+                          </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mx-0 my-[8px]">
+                            Taxi
+                        </h3>
+                        <div class="text-md font-medium px-[16px] py-[10px] text-[#555]">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </div>
+                        <div class="">
+                          <Button class="cursor-pointer p-[12px] bg-[#f9f9f9] flex justify-around text-[#777] w-full">
+                            Book Now
+                          </Button>
+                        </div>
+                    </div>
+                    <div class="relative rounded-xl overflow-hidden bg-[#eee] shadow-xl text-center
+                    hover:scale-[1.01] hover:-translate-y-1 transition-all duration-200">
+                        <div class="relative w-full rounded-xl">
+                          <div class="aspect-3/2">
+                            <img src="/img/foodS.webp" alt=""
+                            class="rounded-tl-xl rounded-tr-xl w-full h-full">
+                          </div>
+                          <svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                          class="absolute bottom-0 left-0 w-full h-[50px]">
+                            <path d="M0,30 C150,80 350,0 500,30 L500,150 L0,150 Z" style="fill:#eee;" />
+                          </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mx-0 my-[8px]">
+                            Fresh Foods
+                        </h3>
+                        <div class="text-md font-medium px-[16px] py-[10px] text-[#555]">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </div>
+                        <div class="">
+                          <Button class="cursor-pointer p-[12px] bg-[#f9f9f9] flex justify-around text-[#777] w-full">
+                            Order Now
+                          </Button>
+                        </div>
+                    </div>
+                    <div class="relative rounded-xl overflow-hidden bg-[#eee] shadow-xl text-center
+                    hover:scale-[1.01] hover:-translate-y-1 transition-all duration-200">
+                        <div class="relative w-full rounded-xl">
+                          <div class="aspect-3/2">
+                            <img src="/img/onlineS.avif" alt=""
+                            class="rounded-tl-xl rounded-tr-xl w-full h-full">
+                          </div>
+                          <svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                          class="absolute bottom-0 left-0 w-full h-[50px]">
+                            <path d="M0,30 C150,80 350,0 500,30 L500,150 L0,150 Z" style="fill:#eee;" />
+                          </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mx-0 my-[8px]">
+                            Shopping
+                        </h3>
+                        <div class="text-md font-medium px-[16px] py-[10px] text-[#555]">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </div>
+                        <div class="">
+                          <Button class="cursor-pointer p-[12px] bg-[#f9f9f9] flex justify-around text-[#777] w-full">
+                            Shop Now
+                          </Button>
+                        </div>
+                    </div>
+                    <div class="relative rounded-xl overflow-hidden bg-[#eee] shadow-xl text-center
+                    hover:scale-[1.01] hover:-translate-y-1 transition-all duration-200">
+                        <div class="relative w-full rounded-xl">
+                          <div class="">
+                            <img src="/img/m-v-S.avif" alt=""
+                            class="rounded-tl-xl rounded-tr-xl ">
+                          </div>
+                          <svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                          class="absolute bottom-0 left-0 w-full h-[50px]">
+                            <path d="M0,30 C150,80 350,0 500,30 L500,150 L0,150 Z" style="fill:#eee;" />
+                          </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mx-0 my-[8px]">
+                            Video & Music
+                        </h3>
+                        <div class="text-md font-medium px-[16px] py-[10px] text-[#555]">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </div>
+                        <div class="">
+                          <Button class="cursor-pointer p-[12px] bg-[#f9f9f9] flex justify-around text-[#777] w-full">
+                            Go
+                          </Button>
+                        </div>
+                    </div>
+                    <div class="relative rounded-xl overflow-hidden bg-[#eee] shadow-xl text-center
+                    hover:scale-[1.01] hover:-translate-y-1 transition-all duration-200">
+                        <div class="relative w-full rounded-xl">
+                          <div class="">
+                            <img src="/img/chatingS.avif" alt=""
+                            class="rounded-tl-xl rounded-tr-xl ">
+                          </div>
+                          <svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                          class="absolute bottom-0 left-0 w-full h-[50px]">
+                            <path d="M0,30 C150,80 350,0 500,30 L500,150 L0,150 Z" style="fill:#eee;" />
+                          </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mx-0 my-[8px]">
+                            Chat To The Wold
+                        </h3>
+                        <div class="text-md font-medium px-[16px] py-[10px] text-[#555]">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </div>
+                        <div class="">
+                          <Button class="cursor-pointer p-[12px] bg-[#f9f9f9] flex justify-around text-[#777] w-full">
+                            Try It Now
+                          </Button>
+                        </div>
+                    </div>
+                    <div class="relative rounded-xl overflow-hidden bg-[#eee] shadow-xl text-center
+                    hover:scale-[1.01] hover:-translate-y-1 transition-all duration-200">
+                        <div class="relative w-full rounded-xl">
+                          <div class="">
+                            <img src="/img/callingS.avif" alt=""
+                            class="rounded-tl-xl rounded-tr-xl ">
+                          </div>
+                          <svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                          class="absolute bottom-0 left-0 w-full h-[50px]">
+                            <path d="M0,30 C150,80 350,0 500,30 L500,150 L0,150 Z" style="fill:#eee;" />
+                          </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mx-0 my-[8px]">
+                            Live Voice & Video Call
+                        </h3>
+                        <div class="text-md font-medium px-[16px] py-[10px] text-[#555]">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </div>
+                        <div class="">
+                          <Button class="cursor-pointer p-[12px] bg-[#f9f9f9] flex justify-around text-[#777] w-full">
+                            Try it Now
+                          </Button>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </main> 
 
 
   
@@ -350,7 +507,7 @@
 
 <!-- <script src="js/index.js"></script> -->
 <script src="https://kit.fontawesome.com/34be1bc1b3.js" crossorigin="anonymous"></script>
-<script src="../js/main.js"></script>
-<script src="../js/discover.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/discover.js"></script>
 </body>
 </html>
