@@ -39,3 +39,81 @@ chatTo.forEach(e => {
     window.location.href = "/Chat/chatTo.html";
   });
 });
+
+// Spotlight IndexSearch with keyboard Shortcut
+const indexSearchBtn = document.getElementById("indexSearchBtn");
+const indexSearchBar = document.getElementById("indexSearchBar");
+
+indexSearchBtn.addEventListener("click", () => {
+  indexSearchBar.classList.remove("hidden");
+});
+
+indexSearchBar.addEventListener("click", (e) => {
+  if (e.target === indexSearchBar) {
+    indexSearchBar.classList.add("hidden");
+  }
+});
+
+window.addEventListener("keydown", (e) => {
+  if ((e.metaKey || e.ctrlKey) && e.shiftKey && e.key.toLowerCase() === "k") {
+    e.preventDefault();
+    indexSearchBar.classList.remove("hidden");
+  }
+
+  // Detect Escape key to hide the bar
+  if (e.key === "Escape") {
+    e.preventDefault();
+    indexSearchBar.classList.add("hidden");
+  }
+});
+// Dreak And Drop The Search Bar @ anywhere Of the Document
+const searchBarDnD = document.getElementById("searchBarDnD");
+searchBarDnD.addEventListener("dragstart", (e) => {
+  e.dataTransfer.setData("text/plain", "dragging");
+});
+
+document.addEventListener("dragover", (e) => {
+  e.preventDefault();
+  searchBarDnD.style.opacity = "0.4";
+});
+
+document.addEventListener("drop", (e) => {
+  e.preventDefault();
+  const offsetX = searchBarDnD.offsetWidth / 2;
+  const offsetY = searchBarDnD.offsetHeight / 2;
+
+
+  searchBarDnD.style.opacity = "1";
+  searchBarDnD.style.position = "absolute";
+  searchBarDnD.style.left = `${e.pageX - offsetX}px`;
+  searchBarDnD.style.top = `${e.pageY - offsetY}px`;
+});
+
+
+
+
+
+
+
+// Noti
+let notiPopupBtn = document.getElementById("notiPopupBtn");
+let notiContactPopup = document.getElementById("notiContactPopup");
+let notiCloseBtn = document.getElementById("notiCloseBtn");
+
+notiPopupBtn.addEventListener("click", ()=>{
+  notiContactPopup.classList.remove("-bottom-[100%]");
+  notiContactPopup.classList.add("bottom-1");
+  notiPopupBtn.classList.add("hidden")
+});
+
+notiCloseBtn.addEventListener("click", ()=>{
+  notiContactPopup.classList.add("-bottom-[100%]");
+  notiContactPopup.classList.remove("bottom-1");
+  notiPopupBtn.classList.remove("hidden")
+});
+
+
+// Footer
+let footerYear = document.getElementById("footerYear");
+let getYear = new Date().getFullYear();
+footerYear.innerText = getYear;

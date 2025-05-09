@@ -96,17 +96,18 @@ login_btn.addEventListener("click", ()=> {
                 &times;
             </button>
 
-            <h2 class="text-2xl font-bold text-gray-800">Welcome to Reflection!</h2>
-            <small class="text-xl font-bold text-gray-800 m-2">${name}</small>
+            <h2 class="text-2xl font-bold text-gray-800">Hello! ${name}</h2>
+            <small class="text-xl font-bold text-gray-800 m-2">Welcome You To Reflection</small>
             <p class="text-gray-600">
                 We're thrilled you're here. Start exploring, connecting, and creating your space.
             </p>
             
             <div class="space-y-2">
-                <button class="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-xl hover:bg-blue-700 transition">
-                Get Started
+                <button id="getStartBtn"
+                    class="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-xl hover:bg-blue-700 transition">
+                    Get Started
                 </button>
-                <button onclick="document.getElementById('welcomeModal').classList.add('hidden')" 
+                <button id="mayBeLater"
                 class="w-full text-sm text-gray-500 hover:underline">
                 Maybe Later
                 </button>
@@ -114,7 +115,12 @@ login_btn.addEventListener("click", ()=> {
           </div>
         </div>
       `
-
+      document.getElementById("getStartBtn").addEventListener("click", ()=>{
+        window.location.href = "/a/"
+      })
+      document.getElementById("mayBeLater").addEventListener("click", ()=>{
+        location.reload();
+      })
     }
   });
   
