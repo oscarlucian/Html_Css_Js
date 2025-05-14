@@ -2,12 +2,44 @@
 const logOutBtn = document.getElementById("logOutBtn");
 
 logOutBtn.addEventListener("click", () => {
-  const confirmed = confirm("Do you want to logout?");
-  if (confirmed) {
-    window.location.href = "../";
-  }
+
+
+    Swal.fire({
+    title: "Are you sure?",
+    text: "Want to Logout",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Logout"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      let timerInterval;
+      Swal.fire({
+        title: "Looging Out",
+        html: "Will be out in <b></b> milliseconds.",
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading();
+          const timer = Swal.getPopup().querySelector("b");
+          timerInterval = setInterval(() => {
+            timer.textContent = `${Swal.getTimerLeft()}`;
+          }, 100);
+        },
+        willClose: () => {
+          clearInterval(timerInterval);
+        }
+      }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+          
+          window.location.href = "../";
+        }
+      });
+    }
+  });
 });
-// Remove the # in getElementById
     let header = document.getElementById("header");
 
     function getTimePeriod() {
