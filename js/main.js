@@ -7,7 +7,59 @@ logOutBtn.addEventListener("click", () => {
     window.location.href = "../";
   }
 });
+// Remove the # in getElementById
+    let header = document.getElementById("header");
 
+    function getTimePeriod() {
+      const now = new Date();
+      const hours = now.getHours();
+
+      if (hours >= 0 && hours < 5) {
+        return "Midnight";
+      } else if (hours >= 5 && hours < 7) {
+        return "Dawn";
+      } else if (hours >= 7 && hours < 12) {
+        return "Morning";
+      } else if (hours >= 12 && hours < 17) {
+        return "Afternoon";
+      } else if (hours >= 17 && hours < 20) {
+        return "Evening";
+      } else {
+        return "Night";
+      }
+    }
+
+    function setBackgroundByTime() {
+      const period = getTimePeriod();
+      switch (period) {
+        case "Midnight":
+          header.style.backgroundColor = "#0b0c10";
+          header.style.filter = "brightness(0.5) contrast(1.2)";
+          break;
+        case "Dawn":
+          header.style.backgroundColor = "#fdd9a0";
+          header.style.filter = "brightness(1.1) sepia(0.3)";
+          break;
+        case "Morning":
+          header.style.backgroundColor = "#fff5b7";
+          header.style.filter = "brightness(1.2)";
+          break;
+        case "Afternoon":
+          header.style.backgroundColor = "#a0d8ef";
+          header.style.filter = "brightness(1)";
+          break;
+        case "Evening":
+          header.style.backgroundColor = "#f9a17d";
+          header.style.filter = "sepia(0.2) contrast(1.1)";
+          break;
+        case "Night":
+          header.style.backgroundColor = "#2c3e50";
+          header.style.filter = "brightness(0.6) grayscale(0.2)";
+          break;
+      }
+    }
+
+    setBackgroundByTime();
 
 // Menu
 let linkLocation = window.location.pathname;
@@ -40,15 +92,30 @@ chatTo.forEach(e => {
   });
 });
 
+
+// popupPnP
+let popupPnP = document.getElementById("popupPnP");
+let btnPnP = document.getElementById("closeBtnPnP");
+
+
+const pNp = () => {
+    popupPnP?.classList.remove("hidden")
+}
+
+setTimeout(pNp, 2000);
+btnPnP?.addEventListener("click", ()=>{
+  popupPnP?.classList.add("hidden")
+});
+
 // Spotlight IndexSearch with keyboard Shortcut
 const indexSearchBtn = document.getElementById("indexSearchBtn");
 const indexSearchBar = document.getElementById("indexSearchBar");
 
-indexSearchBtn.addEventListener("click", () => {
+indexSearchBtn?.addEventListener("click", () => {
   indexSearchBar.classList.remove("hidden");
 });
 
-indexSearchBar.addEventListener("click", (e) => {
+indexSearchBar?.addEventListener("click", (e) => {
   if (e.target === indexSearchBar) {
     indexSearchBar.classList.add("hidden");
   }
@@ -68,13 +135,13 @@ window.addEventListener("keydown", (e) => {
 });
 // Dreak And Drop The Search Bar @ anywhere Of the Document
 const searchBarDnD = document.getElementById("searchBarDnD");
-searchBarDnD.addEventListener("dragstart", (e) => {
+searchBarDnD?.addEventListener("dragstart", (e) => {
   e.dataTransfer.setData("text/plain", "dragging");
 });
 
 document.addEventListener("dragover", (e) => {
   e.preventDefault();
-  searchBarDnD.style.opacity = "0.4";
+  searchBarDnD.style.opacity = "0.5";
 });
 
 document.addEventListener("drop", (e) => {
@@ -85,28 +152,22 @@ document.addEventListener("drop", (e) => {
 
   searchBarDnD.style.opacity = "1";
   searchBarDnD.style.position = "absolute";
-  searchBarDnD.style.left = `${e.pageX - offsetX}px`;
-  searchBarDnD.style.top = `${e.pageY - offsetY}px`;
+  searchBarDnD.style.left = `${e.clientX - offsetX}px`;
+  searchBarDnD.style.top = `${e.clientY - offsetY}px`;
 });
-
-
-
-
-
-
 
 // Noti
 let notiPopupBtn = document.getElementById("notiPopupBtn");
 let notiContactPopup = document.getElementById("notiContactPopup");
 let notiCloseBtn = document.getElementById("notiCloseBtn");
 
-notiPopupBtn.addEventListener("click", ()=>{
+notiPopupBtn?.addEventListener("click", ()=>{
   notiContactPopup.classList.remove("-bottom-[100%]");
   notiContactPopup.classList.add("bottom-1");
   notiPopupBtn.classList.add("hidden")
 });
 
-notiCloseBtn.addEventListener("click", ()=>{
+notiCloseBtn?.addEventListener("click", ()=>{
   notiContactPopup.classList.add("-bottom-[100%]");
   notiContactPopup.classList.remove("bottom-1");
   notiPopupBtn.classList.remove("hidden")
@@ -115,5 +176,7 @@ notiCloseBtn.addEventListener("click", ()=>{
 
 // Footer
 let footerYear = document.getElementById("footerYear");
-let getYear = new Date().getFullYear();
-footerYear.innerText = getYear;
+if(footerYear) {
+  let getYear = new Date().getFullYear();
+  footerYear.innerText = getYear;
+};

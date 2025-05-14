@@ -6,9 +6,10 @@
     <title>Shopping</title>
     <link rel="stylesheet" href="/src/output.css">
 </head>
-<body>
-    <!-- Header and nav -->
-    <header class="z-50 sticky top-0 flex justify-between items-center bg-[#bdadad] p-1">
+<body id="body">
+     <!-- Header and nav  bg-[#bdadad] -->
+    <header id="header"
+     class="z-50 sticky top-0 flex justify-between items-center p-1">
         <div class="w-[45px] h-[45px] hidden md:inline">
             <img src="/img/Logo/logo.png" alt="Logo" class="w-full h-full rounded-sm">
         </div>
@@ -103,33 +104,34 @@
         <div class="h-full flex flex-col justify-between items-center text-[#ccc]">
             <ul class="flex flex-col justify-center items-center gap-7
             border-b pb-2">
-                <div>
-                    <button id="indexSearchBtn"
-                    class="px-3 py-1 rounded-lg
-                    transition-all duration-300 cursor-pointer">    
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                    <!-- Search Bar -->
-                    <div id="indexSearchBar"
-                    class="z-45 fixed w-full -top-[100%] transition-all duration-200">
-                        <div class="flex justify-center"> 
-                            <div class="w-full max-w-xl relative bg-[#2A2D38] rounded-2xl opacity-98">
-                                <div class="absolute text-xl z-1 left-4 top-1/2 transform -translate-y-1/2 text-gray-500">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </div>
-                                <input
-                                type="search"
-                                placeholder="Search..."
-                                class="w-full py-4 pl-12 pr-4 text-lg 
-                                backdrop-blur-xl shadow-xl rounded-2xl placeholder:text-[#ccc] text-gray-300
-                                border
-                                outline-none transition-all"
-                                />
+            <div>
+                <button id="indexSearchBtn"
+                class="px-3 py-1 rounded-lg
+                transition-all duration-300 cursor-pointer">    
+                   <i class="fa-solid fa-magnifying-glass"></i>
+               </button>
+               <!-- Search Bar -->
+               <div id="indexSearchBar"
+                class="z-40 fixed inset-0 transition-all duration-200 hidden">
+                    <div class="flex justify-center mx-3 sm:mx-0 mt-[10%]"> 
+                        <div id="searchBarDnD"  draggable="true"
+                         class="z-55 w-[80%] sm:w-full max-w-xl relative bg-[#2A2D38] rounded-2xl opacity-98">
+                            <div class="absolute text-xl z-1 left-4 top-1/2 transform -translate-y-1/2 text-gray-500">
+                                <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
+                            <input
+                            type="search"
+                            placeholder="Search..."
+                            class="w-full py-4 pl-12 pr-4 text-lg 
+                            backdrop-blur-xl shadow-xl rounded-2xl placeholder:text-[#ccc] text-gray-300
+                            border
+                            outline-none transition-all"
+                            />
                         </div>
                     </div>
+               </div>
 
-                </div>
+            </div>
                 <li c>
                     <a href="#" class="bg-[#444] px-3 py-1 rounded-lg transition-all duration-300">
                         <i class="fa-solid fa-house"></i>
@@ -392,6 +394,5 @@
 
 <script src="https://kit.fontawesome.com/34be1bc1b3.js" crossorigin="anonymous"></script>
 <script src="/js/main.js"></script>
-<script src="/js/discover.js"></script>
 </body>
 </html>

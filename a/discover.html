@@ -8,10 +8,11 @@
     <link rel="icon" type="image/ico" href="/img/Logo/icon.ico">
     <link rel="stylesheet" href="/src/custom.css">
 </head>
-<body>
+<body id="body">
     <div>
-        <!-- Header and nav -->
-        <header class="z-50 sticky top-0 flex justify-between items-center bg-[#bdadad] p-1">
+        <!-- Header and nav  bg-[#bdadad] -->
+        <header id="header"
+         class="z-50 sticky top-0 flex justify-between items-center p-1">
             <div class="w-[45px] h-[45px] hidden md:inline">
                 <img src="/img/Logo/logo.png" alt="Logo" class="w-full h-full rounded-sm">
             </div>
@@ -117,7 +118,7 @@
                         class="z-40 fixed inset-0 transition-all duration-200 hidden">
                             <div class="flex justify-center mx-3 sm:mx-0 mt-[10%]"> 
                                 <div id="searchBarDnD"  draggable="true"
-                                 class="w-[80%] sm:w-full max-w-xl relative bg-[#2A2D38] rounded-2xl opacity-98">
+                                 class="z-55 w-[80%] sm:w-full max-w-xl relative bg-[#2A2D38] rounded-2xl opacity-98">
                                     <div class="absolute text-xl z-1 left-4 top-1/2 transform -translate-y-1/2 text-gray-500">
                                         <i class="fa-solid fa-magnifying-glass"></i>
                                     </div>

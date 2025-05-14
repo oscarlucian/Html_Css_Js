@@ -8,10 +8,11 @@
     <link rel="icon" type="image/ico" href="/img/Logo/icon.ico">
     <link rel="stylesheet" href="/src/custom.css">
 </head>
-<body>
+<body id="body">
     <div>
-        <!-- Header and nav -->
-        <header class="z-50 sticky top-0 flex justify-between items-center bg-[#bdadad] p-1">
+         <!-- Header and nav  bg-[#bdadad] -->
+        <header id="header"
+         class="z-50 sticky top-0 flex justify-between items-center p-1">
             <div class="w-[45px] h-[45px] hidden md:inline">
                 <img src="/img/Logo/logo.png" alt="Logo" class="w-full h-full rounded-sm">
             </div>
@@ -291,24 +292,15 @@
                                     <i class="fa-solid fa-check"></i>
                                 </small>
                             </span>
-
-                        <div class="absolute px-4 py-2 rounded-xl -left-[170%] w-[200px] bg-amber-500">
-                              <ul>
-                                <li>
-                                    Info
-                                </li>
-                                <li>
-                                    Copy
-                                </li>
-                                <li>
-                                    Edit
-                                </li>
-                                <li>
-                                    Delete
-                                </li>
-                              </ul>  
                         </div>
-                        </div>
+                    </div>
+                    <!-- audio -->
+                    <div class="flex justify-end mt-1 items-center gap-2">
+                        <button id="sentMessage_Info"
+                        class="cursor-pointer p-2 ">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                        <audio id="audioPlayback" controls></audio>
                     </div>
                     <!-- Received Message -->
                     <div class="flex justify-start mt-1 items-center gap-2">
@@ -354,7 +346,7 @@
                                 </button>
                                 
                                 <!-- Mic Icon -->
-                                <button type="button"
+                                <button type="button"  id="startBtn"
                                  class="text-gray-400 hover:text-white">
                                     <i class="fa-solid fa-microphone"></i>
                                 </button>
@@ -378,7 +370,7 @@
     </div>  -->
 
 
-<!-- <script src="js/index.js"></script> -->
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://kit.fontawesome.com/34be1bc1b3.js" crossorigin="anonymous"></script>
 <script src="/js/main.js"></script>
 <script src="/js/chat.js"></script>

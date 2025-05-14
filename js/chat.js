@@ -33,3 +33,62 @@ chatForm.addEventListener("submit", (ce) => {
 function scrollToBottom() {
     document.getElementById("mainBody").scrollTop =  document.getElementById("mainBody").scrollHeight;
   }
+
+//   Audio js
+
+//   let mediaRecorder;
+//   let audioChunks = [];
+
+//   const startBtn = document.getElementById('startBtn');
+//   const audioPlayback = document.getElementById('audioPlayback');
+
+  // Ask for microphone access
+//   navigator.mediaDevices.getUserMedia({ audio: true })
+//     .then(stream => {
+//       mediaRecorder = new MediaRecorder(stream);
+
+//       mediaRecorder.ondataavailable = event => {
+//         audioChunks.push(event.data);
+//       };
+
+//       mediaRecorder.onstop = () => {
+//         const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+//         const audioUrl = URL.createObjectURL(audioBlob);
+//         audioPlayback.src = audioUrl;
+//         audioChunks = [];
+//       };
+
+      // Start recording on mousedown
+    //   startBtn.addEventListener('mousedown', () => {
+    //     audioChunks = [];
+    //     mediaRecorder.start();
+    //     console.log('Recording started');
+    //   });
+
+      // Stop recording on mouseup
+    //   startBtn.addEventListener('mouseup', () => {
+    //     if (mediaRecorder.state !== 'inactive') {
+    //       mediaRecorder.stop();
+    //       console.log('Recording stopped');
+    //     }
+    //   });
+
+      // Also handle touch events for mobile devices
+    //   startBtn.addEventListener('touchstart', (e) => {
+    //     e.preventDefault(); // prevent simulated mouse event
+    //     audioChunks = [];
+    //     mediaRecorder.start();
+    //     console.log('Recording started (touch)');
+    //   });
+
+    //   startBtn.addEventListener('touchend', () => {
+    //     if (mediaRecorder.state !== 'inactive') {
+    //       mediaRecorder.stop();
+    //       console.log('Recording stopped (touch)');
+    //     }
+    //   });
+
+    // }).catch(err => {
+    //   console.error('Microphone access denied:', err);
+    //   alert('Microphone access is required to record audio.');
+    // });
