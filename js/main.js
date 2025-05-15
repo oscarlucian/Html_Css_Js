@@ -34,7 +34,7 @@ logOutBtn.addEventListener("click", () => {
         /* Read more about handling dismissals below */
         if (result.dismiss === Swal.DismissReason.timer) {
           
-          window.location.href = "../";
+          window.location.href = "/";
         }
       });
     }
